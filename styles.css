@@ -1,0 +1,238 @@
+/* Allmänna stilar */
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #2C3E50;
+    color: #ECF0F1;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  .container {
+    text-align: center;
+    padding: 50px;
+  }
+  
+  h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+  }
+  
+  .highlight {
+    color: #E74C3C;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  li {
+    margin: 10px 0;
+  }
+
+  #words-said li:last-child {
+    border-bottom: none;
+  }
+  
+  
+  .btn {
+    background-color: #E74C3C;
+    color: #ECF0F1;
+    padding: 15px 30px;
+    font-size: 1em;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .btn:hover {
+    background-color: #C0392B;
+  }
+  
+  /* Välkomstskärm */
+  #welcome-screen {
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #2C3E50;
+  }
+  
+  /* Huvudspelet */
+  #game-screen {
+    flex-direction: column;
+    justify-content: space-between;
+    /* min-height: 100vh;  */
+    padding: 0; 
+  }
+  
+  .scrollable {
+    overflow-y: auto;
+    width: 80%;
+    margin: 0 auto;
+    background-color: #34495E;
+    border-radius: 10px;
+    padding: 20px;
+  }
+  
+  .scrollable h3 {
+    margin-top: 0;
+    color: #E74C3C;
+  }
+  
+  #words-said {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+  }   
+
+  #warning {
+    background-color: #E74C3C;
+    color: #ECF0F1;
+    padding: 5px 10px;
+    text-align: center;
+    width: 40%;
+    margin: 0px auto 15px auto;
+    z-index: 1000;
+    border-radius: 5px; 
+  }
+  
+  #words-said li {
+    padding: 10px;
+    border-bottom: 1px solid #2C3E50;
+    font-size: 1.2em;
+  }
+  
+  /* Spelarinformation längst ner */
+  #player-info {
+    text-align: center;
+    font-size: 1.2em;
+    color: #ECF0F1;
+    flex-shrink: 0; /* Förhindrar att det här området blir för litet */
+  }
+
+  #player-info #timer {
+    font-size: 1em;
+    color: #ECF0F1;
+  }
+  
+  #instructions {
+    font-size: 1.5em; /* Standardstorlek */
+    color: #ECF0F1; /* Färg vid vinst */
+    text-align: center;
+  }
+  
+  #restart-button {
+    font-size: 1.2em; /* Gör knappen lite mindre */
+    padding: 10px 20px; /* Mindre padding */
+    background-color: #27AE60; /* Behåll grön färg */
+    border-radius: 5px; /* Gör knappen lite rundad */
+    margin: auto;
+    width: 30%;
+  }
+  
+  #audio-visualizer {
+    width: 100%;
+    height: 100px;
+    background-color: #34495E;
+    margin-top: 10px;
+    border-radius: 10px;
+  }
+
+  /* Historik (Rubrik) */
+  #game-title {
+    font-size: 5em;
+    color: #E74C3C;
+    text-align: center;
+    margin: 50px 0 20px 0; /* Justerar marginalen ovanför och under rubriken */
+  }
+  
+  /* Ordlistan */
+  #word-list {
+    width: 50%;
+    margin: 0 auto;
+    background-color: #34495E;
+    border-radius: 10px;
+    padding: 0px 20px;
+    height: 350px;
+    overflow-y: scroll;
+  }
+
+  /* Vinstsida */
+#victory-screen {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 40px;
+  background-color: #2C3E50;
+  border-radius: 10px;
+}
+
+#victory-screen h2 {
+  font-size: 2.5em;
+  color: #27AE60; /* Grön färg för vinstmeddelande */
+  margin-bottom: 20px;
+}
+
+#victory-screen .btn {
+  background-color: #27AE60; /* Grön färg */
+  color: #ECF0F1;
+  padding: 15px 30px;
+  font-size: 1.2em;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#victory-screen .btn:hover {
+  background-color: #1E8449;
+}
+
+  
+@media (max-width: 768px) {
+  #word-list {
+    width: 80%; /* Ökar bredden på mobiler */
+    height: 250px;
+  }
+
+  #game-title {
+    font-size: 3.0em; /* Mindre rubrik på mindre skärmar */
+  }
+
+  #player-info {
+    font-size: 1em; /* Minskar textstorleken lite på mindre skärmar */
+  }
+
+  #victory-screen {
+    width: 90%;
+    padding: 20px;
+  }
+
+  #victory-screen h2 {
+    font-size: 2em;
+  }
+
+  #victory-screen .btn {
+    padding: 10px 20px;
+    font-size: 1em;
+    width: 60%;
+  }
+
+  .scrollable {
+    width: 90%;
+  }
+
+  .btn {
+    width: 80%;
+    padding: 15px;
+  }
+
+}
+  

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <title>Ordstorm</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="welcome-screen">
+    <div class="container">
+      <h1>Välkommen till <span class="highlight">Ordstorm</span></h1>
+      <p>Regler:</p>
+      <ul>
+        <li>Säg ord som slutar med '-era' inom 60 sekunder.</li>
+        <li>Upprepa inte ord som redan sagts.</li>
+        <li>Du får en varning vid första upprepningen.</li>
+        <li>Vid andra varningen åker du ut.</li>
+      </ul>
+      <button id="start-button" class="btn">Starta spelet</button>
+    </div>
+  </div>
+
+  <div id="victory-screen" class="hidden">
+    <h2 id="victory-message"></h2>
+    <button id="restart-button-victory" class="btn">Starta om</button>
+</div>
+
+  <div id="game-screen" class="hidden">
+
+    <h3 id="game-title">Ordstorm</h3>
+    <div id="word-list" class="scrollable">
+      <ul id="words-said"></ul>
+    </div>
+    
+    <div id="player-info">
+        <p id="current-player">Spelare 1's tur</p>
+        <p id="instructions"></p>
+        <p id="timer"></p>
+    </div>
+    
+    <div id="warning" class="hidden">
+        <p id="warning-text"></p>
+    </div>
+
+    <button id="restart-button" class="btn hidden">Spela igen</button>
+  </div>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
