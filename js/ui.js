@@ -5,7 +5,6 @@ export const ui = (() => {
     const startButton = document.getElementById('start-button');
     const gameScreen = document.getElementById('game-screen');
     const currentPlayerEl = document.getElementById('current-player');
-    const instructionsEl = document.getElementById('instructions');
     const wordsSaidEl = document.getElementById('words-said');
     const warningEl = document.getElementById('warning');
     const warningTextEl = document.getElementById('warning-text');
@@ -42,12 +41,6 @@ export const ui = (() => {
     const updateCurrentPlayer = (playerId) => {
         currentPlayerEl.textContent = `Spelare ${playerId}'s tur`;
         console.log(`Current player updated: Player ${playerId}`);
-    };
-
-    const updateInstructions = (text, fontSize = '1.5em') => {
-        instructionsEl.textContent = text;
-        instructionsEl.style.fontSize = fontSize;
-        console.log(`Instructions updated: ${text}`);
     };
 
     const updateWordsSaid = (words) => {
@@ -107,7 +100,6 @@ export const ui = (() => {
         showWelcomeScreen,
         showGameScreen,
         updateCurrentPlayer,
-        updateInstructions,
         updateWordsSaid,
         showWarning,
         hideWarning,
