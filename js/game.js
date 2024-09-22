@@ -63,7 +63,7 @@ export const game = (() => {
     const checkGameOver = () => {
         const activePlayers = players.filter(player => player.active);
         if (activePlayers.length === 1) {
-            endGame(`Grattis Spelare ${activePlayers[0].id}, du har vunnit!`);
+            endGame(`Spelare ${activePlayers[0].id}!`);
         } else if (activePlayers.length === 0) {
             endGame('Ingen vann spelet!');
         }
@@ -93,7 +93,6 @@ export const game = (() => {
         currentPlayerIndex = 0;
         wordsSaid = [];
         gameOver = false;
-        ui.updateInstructions('');
         ui.hideWarning();
         ui.hideRestartButton();
         ui.hideVictoryScreen();

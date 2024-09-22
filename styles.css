@@ -180,33 +180,32 @@ li {
   background-color: #2C3E50;
   border-radius: 10px;
   width: 90%;
+  height: 100vh;
   margin: 20px auto;
   box-sizing: border-box;
 }
 
-#victory-screen h2 {
-  font-size: 2em;
-  color: #27AE60;
-  margin-bottom: 15px;
-  text-align: center;
-}
-
 #victory-screen .btn {
-  background-color: #27AE60;
-  color: #ECF0F1;
-  padding: 10px 20px;
-  font-size: 1em;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s;
   width: 80%;
-  max-width: 250px;
+  max-width: 300px;
+  padding: 15px 20px;
+  font-size: 1.2em;
 }
 
-#victory-screen .btn:hover {
-  background-color: #1E8449;
+h2#victory-player {
+  font-size: 3em;
 }
+
+h2#victory-message {
+  font-size: 5em;
+}
+
+#victory-screen h2 {
+  color: #ECF0F1;
+  text-align: center;
+  margin: 0;
+}
+
 
 @media (max-width: 480px) {
   #welcome-screen {
@@ -243,6 +242,23 @@ li {
       margin-top: auto;
   }
 
+  #victory-screen {
+    height: 80vh;
+    padding: 20px;
+  }
+
+  #victory-screen h2{
+    margin: 0;
+  }
+
+  h2#victory-message{
+    margin-top: 50px;
+  }
+
+  #victory-screen .btn {
+    margin-top: auto;
+  }
+
   #game-screen {
       flex-direction: column;
       height: 85vh;
@@ -276,9 +292,9 @@ li {
       margin-bottom: 10px;
   }
 
-  #victory-screen h2 {
+  /* #victory-screen h2 {
       font-size: 1.8em;
-  }
+  } */
 
   #warning {
       padding: 10px 20px;

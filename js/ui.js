@@ -11,7 +11,7 @@ export const ui = (() => {
     const restartButton = document.getElementById('restart-button');
     const restartButtonVictory = document.getElementById('restart-button-victory');
     const victoryScreen = document.getElementById('victory-screen');
-    const victoryMessage = document.getElementById('victory-message');
+    const victoryPlayer = document.getElementById('victory-player');
     let timerEl = document.getElementById('timer');
 
     // Om timerEl inte finns, skapa det
@@ -75,7 +75,7 @@ export const ui = (() => {
     };
 
     const showVictoryScreen = (message) => {
-        victoryMessage.textContent = message;
+        victoryPlayer.textContent = message;
         victoryScreen.classList.remove('hidden');
         gameScreen.classList.add('hidden'); // Dölj spelet
         console.log(`Victory screen shown: ${message}`);
