@@ -27,6 +27,7 @@ h1 {
 ul {
   list-style-type: none;
   padding: 0;
+  margin: 0;
 }
 
 li {
@@ -94,6 +95,7 @@ li {
   padding: 0;
   margin: 0;
   text-align: center;
+  font-size: 1.3em;
 }
 
 #warning {
@@ -102,11 +104,10 @@ li {
   padding: 8px 15px;
   text-align: center;
   width: 90%;
-  margin: 10px auto;
-  z-index: 1000;
+  margin: auto;
+  margin-top: 10px;
   border-radius: 5px; 
   font-size: 1em;
-  margin-top: auto;
 }
 
 #words-said li {
@@ -120,12 +121,9 @@ li {
   font-size: 1em;
   color: #ECF0F1;
   flex-shrink: 0;
-  padding: 10px 0;
-  margin-top: auto;
 }
 
 #player-info #timer {
-  font-size: 0.9em;
   color: #ECF0F1;
 }
 
@@ -215,7 +213,7 @@ li {
       flex-direction: column;
       justify-content: space-between;
       align-items: center;
-      min-height: 100vh;
+      height: 85vh;
       padding: 20px;
   }
 
@@ -234,6 +232,7 @@ li {
 
   #welcome-screen .container p {
       font-size: 1.5em;
+      margin: 0;
   }
 
   #welcome-screen .btn {
@@ -246,8 +245,13 @@ li {
 
   #game-screen {
       flex-direction: column;
-      min-height: 100vh;
+      height: 85vh;
   }
+
+  #game-screen p {
+    margin: 0;
+    font-size: 1.3em;
+}
 
   #game-title {
       font-size: 2.5em;
@@ -257,19 +261,14 @@ li {
   #word-list {
       flex-grow: 1;
       height: auto;
+      width: 90%;
   }
 
   #player-info {
-      position: fixed;
       bottom: 0;
       width: 100%;
       background-color: #2C3E50;
       padding: 10px 0;
-  }
-
-  #word-list {
-      margin-bottom: 60px;
-      width: 90%;
   }
 
   h1 {
@@ -282,9 +281,7 @@ li {
   }
 
   #warning {
-      width: 95%;
       padding: 10px 20px;
-      font-size: 1.1em;
   }
 
   #audio-visualizer {
