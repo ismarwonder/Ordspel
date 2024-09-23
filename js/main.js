@@ -6,7 +6,6 @@ import { startTimer, stopTimer } from './timer.js';
 
 // Initiera spelet
 const init = () => {
-    console.log('Initializing game...');
     ui.showWelcomeScreen();
     game.initializePlayers();
     ui.startButton.addEventListener('click', startGame);
@@ -15,7 +14,6 @@ const init = () => {
 };
 
 const startGame = () => {
-    console.log('Start game button clicked.');
     ui.showGameScreen();
     game.updateCurrentPlayerDisplay();
     speechRecognitionModule.initRecognition();
@@ -24,7 +22,6 @@ const startGame = () => {
 };
 
 const restartGame = () => {
-    console.log('Restart game button clicked.');
     stopTimer();
     speechRecognitionModule.stopRecognition();
     game.resetGame();
